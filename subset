@@ -1,0 +1,8 @@
+//'profile','profileEnd','dirxml'
+var log=(function($w,m){
+ var c=$w.console,f=function(p){var o=c;return o[p].bind(o);},e=f('log');
+ m.forEach(function(p){e[p]=f(p);});
+ e.markTimeline=f('timeStamp');
+ return e;
+})(window,['clear','group','groupCollapsed','groupEnd','info','warn','error','count','assert','dir','table','time','timeEnd']);
+
